@@ -6,7 +6,7 @@ pipeline{
                 echo 'this is step one'
             }
         }
-        stage("run a scricommand"){
+        stage("run a script command"){
             steps{
                 sh 'pwd'
             }
