@@ -3,17 +3,20 @@ pipeline{
     stages{
         stage("A"){
             steps{
-                echo "========executing A========"
+                echo 'this is step one'
             }
         }
-        stage("B"){
+        stage("run a scricommand"){
             steps{
-                echo "========executing A========"
+                sh 'pwd'
             }
         }
-        stage("C"){
+        stage("run multiple command"){
             steps{
-                echo "========executing A========"
+                sh '''pwd
+                ls 
+                date
+                cat'''
             }
         }
         stage("D"){
